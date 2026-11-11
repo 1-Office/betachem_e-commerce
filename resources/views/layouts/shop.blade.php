@@ -339,10 +339,14 @@
         }
 
         .footer-logo {
-            max-height: 180px;
-            max-width: 100%;
-            object-fit: contain;
-        }
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 160px;
+    max-height: 140px;
+    object-fit: contain;
+    margin: 0 auto;
+}
 
         .footer-custom .btn-info {
             color: #fff !important;
@@ -657,7 +661,7 @@
     |--------------------------------------------------------------------------
     */
 
-    $officialFooterLogo = $officialBaseUrl . '/assets/header_logo.png';
+    $officialFooterLogo = $logoUrl;
 
     $privacyPolicy = $officialBaseUrl . '/assets/docs/Privacy%20Policy.pdf';
 
@@ -986,20 +990,17 @@
                 <div class="row w-100 align-items-start">
 
                     {{-- LOGO --}}
-
-                    <div class="col-lg-1">
-
-                        <div class="mb-3 text-center">
-
-                            <img
-                                src="{{ $officialFooterLogo }}"
-                                alt="Betachem Footer Logo"
-                                class="img-fluid footer-logo"
-                            >
-
-                        </div>
-
-                    </div>
+<div class="col-lg-1">
+    <div class="mb-3 text-center">
+        <a href="{{ $officialBaseUrl }}/" aria-label="Betachem Home">
+            <img
+                src="{{ $logoUrl }}"
+                alt="Betachem Logo"
+                class="img-fluid footer-logo"
+            >
+        </a>
+    </div>
+</div>
 
 
                     {{-- NUMBERS AND EMAIL --}}

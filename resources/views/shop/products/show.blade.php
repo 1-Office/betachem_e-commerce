@@ -167,11 +167,12 @@
             </p>
 
             <div class="d-flex flex-wrap gap-2">
-                <a href="{{ url('/shop/contact') }}"
-                   class="btn btn-outline-primary btn-lg">
-                    <i class="fa fa-envelope me-2"></i>
-                    Request Assistance
-                </a>
+    <a href="mailto:contact@bchem.co.za?subject={{ urlencode('Betachem Shop - Request for Assistance') }}"
+       class="btn btn-outline-primary btn-lg">
+        <i class="fa fa-envelope me-2"></i>
+        Request Assistance
+    </a>
+</div>
 
                 <a href="{{ route('shop.index') }}"
                    class="btn btn-outline-secondary btn-lg">
