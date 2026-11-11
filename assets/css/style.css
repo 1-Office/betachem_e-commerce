@@ -1,0 +1,520 @@
+/* =========================================================
+   BETACHEM E-COMMERCE
+   MAIN STYLESHEET
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   ROOT
+   --------------------------------------------------------- */
+
+:root {
+
+    --betachem-blue: #1D88E9;
+    --betachem-dark-blue: #2D208A;
+    --betachem-deep-blue: #1745CA;
+
+    --betachem-light-blue: #EAF5FF;
+
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+
+    --white: #ffffff;
+
+    --border-color: #e5e7eb;
+
+    --shadow-sm:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+
+    --shadow-md:
+        0 10px 30px rgba(0, 0, 0, 0.10);
+
+}
+
+
+/* ---------------------------------------------------------
+   GLOBAL
+   --------------------------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Raleway', sans-serif;
+
+    background: #f8fafc;
+
+    color: var(--text-dark);
+
+    margin: 0;
+
+    line-height: 1.6;
+
+}
+
+
+/* ---------------------------------------------------------
+   LINKS
+   --------------------------------------------------------- */
+
+a {
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+/* ---------------------------------------------------------
+   NAVBAR
+   --------------------------------------------------------- */
+
+.navbar {
+
+    min-height: 78px;
+
+    border-bottom:
+        1px solid rgba(29, 136, 233, 0.08);
+
+}
+
+.navbar-brand {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+
+}
+
+.betachem-brand {
+
+    color: var(--betachem-deep-blue);
+
+    font-size: 1.45rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+.ecommerce-brand {
+
+    color: var(--betachem-blue);
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-top: 5px;
+
+}
+
+.navbar .nav-link {
+
+    color: #374151;
+
+    font-weight: 600;
+
+    padding:
+        0.65rem 0.9rem !important;
+
+}
+
+.navbar .nav-link:hover {
+
+    color: var(--betachem-blue);
+
+}
+
+.navbar .nav-link.active {
+
+    color: var(--betachem-blue);
+
+}
+
+
+/* ---------------------------------------------------------
+   BUTTONS
+   --------------------------------------------------------- */
+
+.btn-primary {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--betachem-blue),
+            var(--betachem-deep-blue)
+        );
+
+    border: none;
+
+}
+
+.btn-primary:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--betachem-deep-blue),
+            var(--betachem-dark-blue)
+        );
+
+    transform: translateY(-1px);
+
+}
+
+.btn-outline-primary {
+
+    color: var(--betachem-blue);
+
+    border-color: var(--betachem-blue);
+
+}
+
+.btn-outline-primary:hover {
+
+    background: var(--betachem-blue);
+
+    border-color: var(--betachem-blue);
+
+}
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.betachem-hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--betachem-deep-blue),
+            var(--betachem-blue)
+        );
+
+    color: white;
+
+    padding: 90px 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.betachem-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    right: -100px;
+
+    top: -100px;
+
+}
+
+.betachem-hero h1 {
+
+    font-size: 3rem;
+
+    font-weight: 800;
+
+}
+
+.betachem-hero p {
+
+    font-size: 1.1rem;
+
+    max-width: 650px;
+
+}
+
+
+/* ---------------------------------------------------------
+   SECTION HEADINGS
+   --------------------------------------------------------- */
+
+.section-title {
+
+    color: var(--betachem-deep-blue);
+
+    font-weight: 800;
+
+    margin-bottom: 0.5rem;
+
+}
+
+.section-subtitle {
+
+    color: var(--text-muted);
+
+}
+
+
+/* ---------------------------------------------------------
+   CARDS
+   --------------------------------------------------------- */
+
+.betachem-card {
+
+    background: white;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 16px;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+.betachem-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCT CARD
+   --------------------------------------------------------- */
+
+.product-card {
+
+    background: white;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border-color);
+
+    height: 100%;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+.product-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow-md);
+
+}
+
+.product-image {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    background: var(--betachem-light-blue);
+
+}
+
+.product-card-body {
+
+    padding: 20px;
+
+}
+
+.product-name {
+
+    font-weight: 700;
+
+    color: #1f2937;
+
+}
+
+.product-price {
+
+    color: var(--betachem-deep-blue);
+
+    font-size: 1.2rem;
+
+    font-weight: 800;
+
+}
+
+
+/* ---------------------------------------------------------
+   BADGES
+   --------------------------------------------------------- */
+
+.bg-primary {
+
+    background-color:
+        var(--betachem-blue) !important;
+
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+.betachem-footer {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--betachem-dark-blue),
+            var(--betachem-deep-blue)
+        );
+
+    color: white;
+
+}
+
+.footer-title {
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+
+}
+
+.footer-links li {
+
+    margin-bottom: 8px;
+
+}
+
+.footer-links a {
+
+    color:
+        rgba(255, 255, 255, 0.85);
+
+}
+
+.footer-links a:hover {
+
+    color: white;
+
+}
+
+.footer-divider {
+
+    border-color:
+        rgba(255, 255, 255, 0.2);
+
+}
+
+
+/* ---------------------------------------------------------
+   FORMS
+   --------------------------------------------------------- */
+
+.form-control,
+.form-select {
+
+    border-radius: 10px;
+
+    border:
+        1px solid #dbe1e8;
+
+    padding: 0.75rem 1rem;
+
+}
+
+.form-control:focus,
+.form-select:focus {
+
+    border-color:
+        var(--betachem-blue);
+
+    box-shadow:
+        0 0 0 0.2rem
+        rgba(29, 136, 233, 0.15);
+
+}
+
+
+/* ---------------------------------------------------------
+   EMPTY STATE
+   --------------------------------------------------------- */
+
+.empty-state {
+
+    background: white;
+
+    border:
+        1px dashed #cbd5e1;
+
+    border-radius: 16px;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+}
+
+.empty-state i {
+
+    font-size: 3rem;
+
+    color:
+        var(--betachem-blue);
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .betachem-hero {
+
+        padding: 65px 0;
+
+    }
+
+    .betachem-hero h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+    .navbar-brand {
+
+        margin-right: auto;
+
+    }
+
+}
